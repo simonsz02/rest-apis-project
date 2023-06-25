@@ -29,6 +29,7 @@ class UserRegister(MethodView):
 
 @blp.route("/login")
 class UserLogin(MethodView):
+    
     @blp.arguments(UserSchema)
     def post(self, user_data):
         user = UserModel.query.filter(
