@@ -57,3 +57,7 @@ class UserSchema(Schema):
     username = fields.Str(required=True)
     # We never want to return the user's password to the client
     password = fields.Str(required=True)
+
+
+class UserRegisterSchema(UserSchema):
+    email = fields.Str(required=True)
